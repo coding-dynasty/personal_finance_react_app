@@ -1,0 +1,40 @@
+const transactions = [
+  {
+    id: 1,
+    type: 'income',
+    description: 'Salary',
+    amount: 5000,
+  },
+  {
+    id: 2,
+    type: 'expense',
+    description: 'Rent',
+    amount: 1500,
+  },
+  {
+    id: 3,
+    type: 'expense',
+    description: 'Groceries',
+    amount: 300,
+  },
+  {
+    id: 4,
+    type: 'income',
+    description: 'Freelance Work',
+    amount: 2000,
+  },
+  {
+    id: 5,
+    type: 'expense',
+    description: 'Electricity Bill',
+    amount: 200,
+  },
+  {
+    id: 6,
+    type: 'income',
+    description: 'Bonus',
+    amount: 1000,
+  },
+];
+
+export default transactions

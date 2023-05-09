@@ -1,0 +1,153 @@
+$dark-color: #333;
+$light-color: #fff;
+$income-color: green;
+$expense-color: red;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  .TransactionForm {
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      div {
+        margin-bottom: 10px;
+
+        label {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 5px;
+        }
+
+        input,
+        select {
+          padding: 5px;
+          border-radius: 3px;
+          border: none;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          font-size: 16px;
+          width: 100%;
+          background-color: #f0f0f0;
+        }
+
+        input[type='number']::-webkit-inner-spin-button,
+        input[type='number']::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+
+      button[type='submit'] {
+        background-color: #44c767;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #3d9e5d;
+        }
+      }
+    }
+  }
+
+  .transaction-list {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 5px;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .transaction {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        margin-right: 1rem;
+      }
+
+      .description {
+        flex: 1;
+        margin-right: 1rem;
+      }
+
+      .amount {
+        font-weight: bold;
+        color: $dark-color;
+      }
+
+      &.income .amount,
+      &.income .tansaction-type {
+        color: $income-color;
+      }
+
+      &.expense .amount,
+      &.expense .tansaction-type {
+        color: $expense-color;
+      }
+    }
+  }
+
+  summary {
+    background-color: $light-color;
+    border: 1px solid $dark-color;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    .total-income {
+      color: green;
+    }
+
+    .total-expenses {
+      color: red;
+    }
+
+    .balance {
+      font-weight: bold;
+    }
+  }
+}
